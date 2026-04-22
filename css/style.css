@@ -1,0 +1,118 @@
+:root {
+    --c1: #e4e6c3;
+    --c2: #c5d86d;
+    --c3: #f96e46;
+    --c4: #261C15;
+    --c10: #EEEFDB;
+}
+
+/* https://coolors.co/c5d86d-261c15-f7f7f2-eeefdb-e4e6c3-f05d23 */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Noto Sans JP;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    padding: 1.5em 0.5em;
+    background-color: var(--c1);
+    background-color: var(--c1);
+    border-bottom: 2px solid var(--c4);
+}
+
+.logo a {
+    color: var(--c4);
+}
+
+#logo-text {
+    background-color: var(--c1);
+    width: 5em;
+    line-height: 0.7;
+    position: relative;
+    padding: 0.1em 0.15em;
+    border-radius: 0.3em 0 0 0;
+}
+
+#logo-svg {
+    width: 1.5em;
+    position: relative;
+    left: -0.6em;
+    top: 1.2em;
+    opacity: 0.5;
+}
+
+#login {
+    border: 2px var(--c4) solid;
+    padding: 0.4em;
+    border-radius: 0.5em;
+    background-color: #00000010;
+}
+
+#login-input {
+    display: grid;
+    grid-template-columns: 5em 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0.2em;
+}
+
+.login-center {
+    text-align: center; 
+    margin: 0.3em 0;
+}
+
+.center {
+    max-width: 60em;
+    margin: auto;
+}
+
+#navigation {
+    background-color: #f7f7f2;
+    display: flex;
+}
+
+.navigation-selected {
+    font-weight: bold;
+    background-color: #00000010;
+    border-bottom: 3px solid var(--c2) !important;
+}
+
+.navigation-link {
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0.5em 0;
+    flex-grow: 1;
+    border-bottom: 3px solid transparent;
+    color: var(--c4);
+}
+
+.navigation-link:hover {
+    background-color: lightgray;
+    border-bottom: 3px solid var(--c3) !important;
+    /* border-bottom: 3px solid  !important; */
+}
+
+.body {
+    padding: 2em;
+}
+
+.header-split {
+    display: grid;
+    grid-template-columns: 1fr 20em;
+}
+
+.header-split-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer {
+    text-align: center;
+    background-color: var(--c10);
+    height: 100%;
+}

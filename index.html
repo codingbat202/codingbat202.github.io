@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingBat</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dropdown.css">
     <script src=""></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
                     <img src="assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
                     <a href="/" style="font-size: 3em;">
                         <div id="logo-text">
-                            CodingBat2
+                            CodingBat
                         </div>
                     </a>
                 </div>
@@ -24,20 +25,24 @@
             </div>
 
             <div class="header-split-right">
-                <div id="lang-switch">
-                    java/python
+                <!-- <div id="lang-switch"> -->
+                <!--     java/python -->
+                <!-- </div> -->
+                <div class="login-buttons">
+                    <input type="button" id="login-button" value="Log In" onclick="window.location.href='\login'">
+                    <input type="button" id="signup-button" value="Sign Up">
                 </div>
-                <div id="login">
-                    <div class="login-center" style="font-size: 1.2em;">Login</div>
-                    <div id="login-input">
-                        ID/Email: <input id="username" type="text" value="username123">
-                        Password: <input id="password" type="password" value="password">
-                        <br><input type="button" value="Submit" style="width: 6em;">
-                    </div>
-                    <div class="login-center" style="font-size: 0.9em;">
-                        <a href="#">Forgot Password</a> | <a href="#">Create Account</a>
-                    </div>
-                </div>
+                <!-- <div id="login"> -->
+                <!--     <div class="login-center" style="font-size: 1.2em;">Login</div> -->
+                <!--     <div id="login-input"> -->
+                <!--         ID/Email: <input id="username" type="text" value="username123"> -->
+                <!--         Password: <input id="password" type="password" value="password"> -->
+                <!--         <br><input type="button" value="Submit" style="width: 6em;"> -->
+                <!--     </div> -->
+                <!--     <div class="login-center" style="font-size: 0.9em;"> -->
+                <!--         <a href="#">Forgot Password</a> | <a href="#">Create Account</a> -->
+                <!--     </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -49,24 +54,50 @@
                 Home
             </a>
 
-            <a class="navigation-link" href="/problems">
-                Problems
-            </a>
+            <div class="navigation-link dropdown">
+                <a class="navigation-link" href="/problems">
+                    Problems
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Java</a>
+                    <a href="#">Python</a>
+                </div>
+            </div>
 
-            <a class="navigation-link" href="/getting-started.html">
+            <a class="navigation-link" href="/getting-started">
                 Getting Started
             </a>
 
-            <a class="navigation-link" href="/resources">
-                Resources
-            </a>
+            <div class="navigation-link dropdown">
+                <a class="navigation-link" href="/problems">
+                    Resources
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Java Help</a>
+                    <a href="#">Python Help</a>
+                    <a href="#">For Teachers</a>
+                </div>
+            </div>
 
-            <a class="navigation-link" href="about.html">
+            <a class="navigation-link" href="/about">
                 About
             </a>
         </div>
 
         <div class="body">
+
+                <!-- <div id="login"> -->
+                <!--     <div class="login-center" style="font-size: 1.2em;">Login</div> -->
+                <!--     <div id="login-input"> -->
+                <!--         ID/Email: <input id="username" type="text" value="username123"> -->
+                <!--         Password: <input id="password" type="password" value="password"> -->
+                <!--         <br><input type="button" value="Submit" style="width: 6em;"> -->
+                <!--     </div> -->
+                <!--     <div class="login-center" style="font-size: 0.9em;"> -->
+                <!--         <a href="#">Forgot Password</a> | <a href="#">Create Account</a> -->
+                <!--     </div> -->
+                <!-- </div> -->
+
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo quam, elementum aliquam erat blandit, pretium vulputate orci. Morbi quis lorem sed augue efficitur bibendum et eget enim. Sed nibh nisi, rhoncus laoreet urna eu, ultrices sodales nibh. Etiam eget nunc fringilla, aliquam metus non, rhoncus quam. Vestibulum eget nibh nec purus iaculis placerat. Morbi luctus sapien quis mauris elementum dignissim. Donec sed ipsum porttitor, pellentesque odio vel, tempor mauris. Mauris eu velit varius massa tincidunt posuere nec mattis elit.
 
             Mauris nec faucibus turpis. Vivamus et odio tincidunt, feugiat sapien non, auctor lacus. In tempor tincidunt est vel pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis convallis velit et convallis aliquet. Cras viverra consectetur mauris vitae eleifend. Donec tincidunt ullamcorper nulla eget tincidunt. Etiam a commodo purus, id congue elit. Nunc lacinia turpis id ligula scelerisque interdum. Nullam porta, orci ut scelerisque euismod, sem sapien pellentesque odio, vel porttitor nibh justo non erat. Proin tincidunt mauris id posuere ultrices. Donec hendrerit semper lacus sed molestie. Suspendisse potenti. Nulla placerat, odio nec facilisis congue, urna risus cursus metus, at vehicula metus urna at turpis. Suspendisse odio erat, semper id congue in, posuere sit amet nulla. Donec in venenatis quam, sed interdum massa. 

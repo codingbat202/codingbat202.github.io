@@ -26,6 +26,7 @@ a {
 
 .logo a {
     color: var(--c4);
+    cursor: pointer;
 }
 
 #logo-text {
@@ -48,26 +49,9 @@ a {
     opacity: 0.5;
 }
 
-#login {
-    /* border: 2px var(--c4) solid; */
-    padding: 0.4em;
-    border-radius: 0.5em;
-    background-color: #00000010;
-}
 
-#login-input {
-    display: grid;
-    grid-template-columns: 5em 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.2em;
-}
 
-.login-center {
-    text-align: center; 
-    margin: 0.3em 0;
-}
-
-.login-buttons {
+#login-buttons {
     display: flex;
     justify-content: end;
     gap: 1em;

@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingBat</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dropdown.css">
-    <script src=""></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dropdown.css">
+    <script src="../js/url.js"></script>
 </head>
 <body>
     <div id="header">
         <div class="header-split center">
             <div class="header-split-left">
                 <div class="logo">
-                    <img src="assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
-                    <a href="/" style="font-size: 3em;">
+                    <img src="../assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
+                    <a onclick="goUrl('../');" style="font-size: 3em;">
                         <div id="logo-text">
                             CodingBat
                         </div>
@@ -28,21 +28,11 @@
                 <!-- <div id="lang-switch"> -->
                 <!--     java/python -->
                 <!-- </div> -->
-                <div class="login-buttons">
-                    <input type="button" id="login-button" value="Log In" onclick="window.location.href='\login'">
+                <div id="login-buttons">
+                    <input type="button" id="login-button" value="Log In" onclick="goUrl('../login')">
                     <input type="button" id="signup-button" value="Sign Up">
                 </div>
-                <!-- <div id="login"> -->
-                <!--     <div class="login-center" style="font-size: 1.2em;">Login</div> -->
-                <!--     <div id="login-input"> -->
-                <!--         ID/Email: <input id="username" type="text" value="username123"> -->
-                <!--         Password: <input id="password" type="password" value="password"> -->
-                <!--         <br><input type="button" value="Submit" style="width: 6em;"> -->
-                <!--     </div> -->
-                <!--     <div class="login-center" style="font-size: 0.9em;"> -->
-                <!--         <a href="#">Forgot Password</a> | <a href="#">Create Account</a> -->
-                <!--     </div> -->
-                <!-- </div> -->
+                <p id="logged-in" style="line-height: 1em; margin: 0; padding: 0; text-align: right; display: none;">Logged in as StudentName</p>
             </div>
         </div>
     </div>
@@ -82,6 +72,15 @@
             <a class="navigation-link" href="/about">
                 About
             </a>
+
+            <div class="navigation-link dropdown" style="display: none" id="account-tab">
+                <a class="navigation-link" href="#">
+                    Account
+                </a>
+                <div class="dropdown-content">
+                    <a href="../">Sign Out</a>
+                </div>
+            </div>
         </div>
 
         <div class="body">
@@ -112,4 +111,5 @@
         </div>
     </div>
 </body>
+    <script src="../js/code.js"></script>
 </html>

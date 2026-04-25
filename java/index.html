@@ -5,169 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingBat</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dropdown.css">
-    <link rel="stylesheet" href="../css/problems.css">
-    <script src="../js/url.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/problems.css">
+    <script src="/js/url.js"></script>
 </head>
 <body>
     <div id="body" class="body">
         <div id="categories-list">
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Warmup</h1>
-                <!-- <div class="resources-list"> -->
-                <!--     resource 1 -->
-                <!-- </div> -->
-                <div class="subcat-list">
-                    <div class="subcat">
-                        <h2>Difficulty I</h2>
-                        <div class="description">Simple warmup problems to get started (solutions available)</div>
-                        <hr>
-                        <div class="problems-list">
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">sleepIn</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">monkeyTrouble</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">sumDouble</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">diff21</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">makes10</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">nearHundred</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">notString</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">missingChar</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">front3</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">backAround</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">front22</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">startHi</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">in1020</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">hasTeen</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">delDel</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">mixStart</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">intMax</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">close10</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">max1020</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">stringE</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">endUp</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">everyNth</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">parrotTrouble</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">posNeg</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">frontBack</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">or35</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">icyHot</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">loneTeen</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">startOz</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">in3050</a>
-                            <input type="checkbox" disabled="true" checked="true">
-                            <a class="problem" href="../java/p1/">lastDigit</a>
-                        </div>
-                    </div>
-                    <div class="subcat">
-                        <h2>Difficulty II</h2>
-                        <div class="description">Medium warmup string/array loops (solutions available)</div>
-                        <hr>
-                        <div class="problems-list">
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringTimes</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">frontTimes</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">countXX</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">doubleX</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringBits</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringSplosion</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">last2</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">arrayCount9</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">arrayFront9</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">array123</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringMatch</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringX</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">altPairs</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">stringYak</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">array667</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">noTriples</a>
-                            <input type="checkbox" disabled="true">
-                            <a class="problem" href="../java/p1/">has271</a>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Logic</h1>
-                <div class="resources-list">
-                    resource 1
-                </div>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>String</h1>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Array</h1>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Recursion</h1>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>AP</h1>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Map</h1>
-                <div class="category-description"></div>
             </div>
 
-            <div class="category">
+            <div class="category" onclick="goUrl('/java/array/')">
                 <h1>Functional Programming</h1>
-                <div class="category-description"></div>
             </div>
         </div>
     </div>
@@ -177,8 +52,8 @@
         <div class="header-split center">
             <div class="header-split-left">
                 <div class="logo">
-                    <img src="../assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
-                    <a onclick="goUrl('../');" style="font-size: 3em;">
+                    <img src="/assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
+                    <a onclick="goUrl('/');" style="font-size: 3em;">
                         <div id="logo-text">
                             CodingBat
                         </div>
@@ -192,8 +67,8 @@
                 <!--     java/python -->
                 <!-- </div> -->
                 <div id="login-buttons">
-                    <input type="button" id="login-button" value="Log In" onclick="goUrl('../login/')">
-                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('../signup/')">
+                    <input type="button" id="login-button" value="Log In" onclick="goUrl('/login/')">
+                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('/signup/')">
                 </div>
                 <p id="logged-in" style="line-height: 1em; margin: 0; padding: 0; text-align: right; display: none;">Logged in as StudentName</p>
             </div>
@@ -203,43 +78,43 @@
     <div class="center">
 
         <div id="navigation">
-            <a class="navigation-link" onclick="goUrl('../')">
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/')">
                 Home
             </a>
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" onclick="goUrl('../java/')">
+                <a class="navigation-link-content" onclick="goUrl('/java/')">
                     Problems
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('../java/')">Java</a>
-                    <a onclick="goUrl('../python/')">Python</a>
+                    <a onclick="goUrl('/java/')">Java</a>
+                    <a onclick="goUrl('/python/')">Python</a>
                 </div>
             </div>
 
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" onclick="goUrl('../resources/')">
+                <a class="navigation-link-content" onclick="goUrl('/resources/')">
                     Resources
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('../getting-started/')">Getting Started</a>
+                    <a onclick="goUrl('/getting-started/')">Getting Started</a>
                     <a href="#">Java Help</a>
                     <a href="#">Python Help</a>
                     <a href="#">For Teachers</a>
                 </div>
             </div>
 
-            <a class="navigation-link" onclick="goUrl('../about/')">
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/about/')">
                 About
             </a>
 
             <div class="navigation-link dropdown" style="display: none" id="account-tab">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link-content" href="#">
                     Account
                 </a>
                 <div class="dropdown-content">
-                    <a href="../">Sign Out</a>
+                    <a href="/">Sign Out</a>
                 </div>
             </div>
         </div>
@@ -257,7 +132,7 @@
     <!-- }}} -->
 
 </body>
-    <script src="../js/code.js"></script>
-    <script src="../js/template.js"></script>
+    <script src="/js/code.js"></script>
+    <script src="/js/template.js"></script>
     <script>selectedTabIndex(1)</script>
 </html>

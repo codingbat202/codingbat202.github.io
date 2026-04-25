@@ -58,8 +58,8 @@ The progress graph feature draws a graph of the course of each problem, and grap
         <div class="header-split center">
             <div class="header-split-left">
                 <div class="logo">
-                    <img src="../assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
-                    <a onclick="goUrl('../');" style="font-size: 3em;">
+                    <img src="/assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
+                    <a onclick="goUrl('/');" style="font-size: 3em;">
                         <div id="logo-text">
                             CodingBat
                         </div>
@@ -73,8 +73,8 @@ The progress graph feature draws a graph of the course of each problem, and grap
                 <!--     java/python -->
                 <!-- </div> -->
                 <div id="login-buttons">
-                    <input type="button" id="login-button" value="Log In" onclick="goUrl('../login/')">
-                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('../signup/')">
+                    <input type="button" id="login-button" value="Log In" onclick="goUrl('/login/')">
+                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('/signup/')">
                 </div>
                 <p id="logged-in" style="line-height: 1em; margin: 0; padding: 0; text-align: right; display: none;">Logged in as StudentName</p>
             </div>
@@ -84,43 +84,43 @@ The progress graph feature draws a graph of the course of each problem, and grap
     <div class="center">
 
         <div id="navigation">
-            <a class="navigation-link" onclick="goUrl('../')">
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/')">
                 Home
             </a>
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" onclick="goUrl('../java/')">
+                <a class="navigation-link-content" onclick="goUrl('/java/')">
                     Problems
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('../java/')">Java</a>
-                    <a onclick="goUrl('../python/')">Python</a>
+                    <a onclick="goUrl('/java/')">Java</a>
+                    <a onclick="goUrl('/python/')">Python</a>
                 </div>
             </div>
 
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" onclick="goUrl('../resources/')">
+                <a class="navigation-link-content" onclick="goUrl('/resources/')">
                     Resources
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('../getting-started/')">Getting Started</a>
+                    <a onclick="goUrl('/getting-started/')">Getting Started</a>
                     <a href="#">Java Help</a>
                     <a href="#">Python Help</a>
                     <a href="#">For Teachers</a>
                 </div>
             </div>
 
-            <a class="navigation-link" onclick="goUrl('../about/')">
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/about/')">
                 About
             </a>
 
             <div class="navigation-link dropdown" style="display: none" id="account-tab">
-                <a class="navigation-link" href="#">
+                <a class="navigation-link-content" href="#">
                     Account
                 </a>
                 <div class="dropdown-content">
-                    <a href="../">Sign Out</a>
+                    <a href="/">Sign Out</a>
                 </div>
             </div>
         </div>

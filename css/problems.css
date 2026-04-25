@@ -6,9 +6,12 @@
 
 
 #categories-list {
-  display: flex;
-  flex-direction: column;
-  gap: 4em;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 4em; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
 }
 
 h1 {
@@ -16,15 +19,7 @@ h1 {
   font-size: 18pt;
   font-weight: bold;
   font-family: Jost* Book;
-  background-color: var(--c2);
   padding: 1em 1em 1em 1em;
-}
-
-input[type="checkbox"]:disabled {
-  background-color: red;
-  background: red;
-  color: red;
-  outline: red;
 }
 
 .resources-list {
@@ -43,9 +38,15 @@ h2 {
 }
 
 .category {
-  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.2);
+  /* box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.2); */
   border-radius: 1em;
   overflow: hidden;
+  cursor: pointer;
+  background-color: var(--c2);
+}
+
+.category:hover {
+  background-color: var(--c2a);
 }
 
 .subcat {

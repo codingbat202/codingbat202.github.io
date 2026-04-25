@@ -1,6 +1,7 @@
 :root {
     --c1: #e4e6c3;
     --c2: #c5d86d;
+    --c2a: #b2c16c;
     --c3: #717744;
     --c3: #f96e46;
     --c3a: #c55737;
@@ -82,7 +83,7 @@ input[type="button"] {
 }
 
 #signup-button:hover {
-    background-color: #b2c16c;
+    background-color: var(--c2a);
 }
 
 
@@ -105,12 +106,19 @@ input[type="button"] {
 .navigation-link {
     text-align: center;
     font-size: 15pt;
-    padding: 0.5em 0;
+    /* padding: 0.5em 0; */
     flex-grow: 1;
-    border-bottom: 3px solid transparent;
+    /* border-bottom: 3px solid transparent; */
     color: var(--c4);
     cursor: pointer;
 }
+.navigation-link-content {
+    margin: 0;
+  padding: 12px 16px;
+  display: block;
+    color: black;
+}
+
 
 .navigation-link:hover {
     background-color: lightgray;

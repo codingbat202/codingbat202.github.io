@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+code {
+  font-size: 12pt;
+}
+
 #header {
     padding: 1.5em 0.5em 1.5em 2.5em;
     background-color: var(--c1);

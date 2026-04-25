@@ -18,8 +18,11 @@ h1 {
   margin: 0;
   font-size: 18pt;
   font-weight: bold;
-  font-family: Jost* Book;
-  padding: 1em 1em 1em 1em;
+}
+
+.cat-desc {
+  color: #000000b0;
+  flex-grow: 1;
 }
 
 .resources-list {
@@ -37,12 +40,39 @@ h2 {
   font-size: 14pt;
 }
 
+.progress {
+  display: grid;
+  height: 1em;
+  grid-template-columns: 1fr 1fr 1.5em;
+  /* text-align: right; */
+  font-size: 12pt;
+}
+.progress span {
+  text-align: right;
+}
+
+.progress p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.progress img {
+  margin-top: 3px;
+  display: inline-block;
+  width: 1.2em;
+}
+
+
+
 .category {
   /* box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.2); */
   border-radius: 1em;
   overflow: hidden;
   cursor: pointer;
   background-color: var(--c2);
+  padding: 1em 1em 1.5em 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .category:hover {

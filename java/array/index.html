@@ -8,123 +8,139 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/dropdown.css">
     <link rel="stylesheet" href="/css/problems.css">
+    <link rel="stylesheet" href="/css/text.css">
     <script src="/js/url.js"></script>
 </head>
 <body>
     <div id="body" class="body">
-        <h1>Array Problems</h1>
+        <h1 class="no-top">Array Problems</h1>
         <div class="resources-list">
+            Use <code>a[0]</code>, <code>a[1]</code>, ... to access elements in array <code>a</code>. 
+            Use <code>a.length</code> to access the number of elements in array <code>a</code>. 
+            Create a new array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. 
             resource 1
         </div>
+
+
+
         <div class="subcat-list">
             <div class="subcat">
-                <h2>Difficulty I</h2>
-                <div class="description">Simple warmup problems to get started (solutions available)</div>
+                <div class="subcat-head">
+                    <h2>Difficulty I</h2>
+                    <span>18 / 27 Complete</span>
+                </div>
+
+                <div class="prog-bar">
+                    <div class="prog-bar-complete" prog="60"></div>
+                </div>
+
+                <div class="description">Basic array problems with no loops. </div>
                 <hr>
                 <div class="problems-list">
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">sleepIn</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/array/p1/">monkeyTrouble</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">sumDouble</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/array/p1/">diff21</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">makes10</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/array/p1/">nearHundred</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">notString</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">missingChar</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">front3</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/array/p1/">backAround</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">front22</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">startHi</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/array/p1/">in1020</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">hasTeen</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">delDel</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">mixStart</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">intMax</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">close10</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">max1020</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">stringE</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">endUp</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">everyNth</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">parrotTrouble</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">posNeg</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">frontBack</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">or35</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">icyHot</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">loneTeen</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">startOz</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">in3050</a>
-                    <input type="checkbox" disabled="true" checked="true">
-                    <a class="problem" href="/java/array/p1/">lastDigit</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">firstLast6</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sameFirstLast</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">makePi</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">commonEnd</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sum3</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">rotateLeft3</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">reverse3</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">maxEnd3</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sum2</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">middleWay</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">makeEnds</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">has23</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">no23</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">makeLast</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">double23</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fix23</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">start1</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">biggerTwo</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">makeMiddle</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">plusTwo</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">swapEnds</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">midThree</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">maxTriple</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">frontPiece</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">unlucky1</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">make2</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">front11</a>
+                </div>
+            </div>
+
+
+
+
+            <div class="subcat">
+                <div class="subcat-head">
+                    <h2>Difficulty II</h2>
+                    <span>1 / 34 Complete</span>
+                </div>
+
+                <div class="prog-bar">
+                    <div class="prog-bar-complete" prog="2"></div>
+                </div>
+
+                <div class="description">Medium array problems to practice iterating over 1 loop. </div>
+                <hr>
+                <div class="problems-list">
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">countEvens</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">bigDiff</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">centeredAverage</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sum13</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sum67</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">has22</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">lucky13</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sum28</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">more14</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fizzArray</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">only14</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fizzArray2</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">no14</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">isEverywhere</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">either24</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">matchUp</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">has77</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">has12</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">modThree</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">haveThree</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">twoTwo</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">sameEnds</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">tripleUp</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fizzArray3</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">shiftLeft</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">tenRun</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">pre4</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">post4</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">notAlone</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">zeroFront</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">withoutTen</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">zeroMax</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">evenOdd</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fizzBuzz</a>
                 </div>
             </div>
             <div class="subcat">
-                <h2>Difficulty II</h2>
-                <div class="description">Medium warmup string/array loops (solutions available)</div>
+                <div class="subcat-head">
+                    <h2>Difficulty III</h2>
+                    <span>7 / 9 Complete</span>
+                </div>
+
+                <div class="prog-bar">
+                    <div class="prog-bar-complete" prog="70"></div>
+                </div>
+
+                <div class="description">Harder array problems to practice 2 nested loops and more complex logic. </div>
                 <hr>
                 <div class="problems-list">
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringTimes</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">frontTimes</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">countXX</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">doubleX</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringBits</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringSplosion</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">last2</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">arrayCount9</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">arrayFront9</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">array123</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringMatch</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringX</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">altPairs</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">stringYak</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">array667</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">noTriples</a>
-                    <input type="checkbox" disabled="true">
-                    <a class="problem" href="/java/p1/">has271</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">maxSpan</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fix34</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">fix45</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">canBalance</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">linearIn</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">squareUp</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">seriesUp</a>
+                    <input type="checkbox" disabled="true" checked="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">maxMirro</a>
+                    <input type="checkbox" disabled="true"> <a class="problem" href="#" onclick="goUrl('/java/array/p1/')">countClumps</a>
                 </div>
             </div>
         </div>

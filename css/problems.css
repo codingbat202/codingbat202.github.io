@@ -20,6 +20,14 @@ h1 {
   font-weight: bold;
 }
 
+.head {
+  font-size: 20pt;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  color: var(--c3a)
+}
+
 .cat-desc {
   color: #000000b0;
   flex-grow: 1;
@@ -31,6 +39,22 @@ h1 {
 
 .subcat-list {
   padding: 0em 2em 2em 2em;
+}
+
+.subcat-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 4em;
+}
+
+.subcat-head span {
+  text-align: right;
+  font-weight: bold;
+  color: var(--c3a);
+}
+
+.subcat-head h2 {
+  margin-top: 0 !important;
 }
 
 h2 {
@@ -79,11 +103,35 @@ h2 {
   background-color: var(--c2a);
 }
 
-.subcat {
-  /* background-color: lightblue; */
-}
 
 .problems-list {
   display: grid;
-  grid-template-columns: repeat(4, 2em 1fr);
+  grid-template-columns: repeat(3, 2em 1fr);
+}
+
+.prog-bar {
+  background-color: var(--c10);
+  width: calc(100% - 2em);
+  height: 0.6em;
+  border-radius: 5em;
+  margin: 1em;
+}
+
+.prog-bar-complete {
+  background-color: var(--c2);
+  width: 0;
+  height: 100%;
+  border-radius: 5em;
+}
+
+.prog-bar-complete[prog="60"] {
+  width: 66.6%;
+}
+
+.prog-bar-complete[prog="70"] {
+  width: 77.8%;
+}
+
+.prog-bar-complete[prog="2"] {
+  width: 2.9%;
 }

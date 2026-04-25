@@ -25,6 +25,11 @@ code {
   font-size: 12pt;
 }
 
+@font-face {
+    font-family: Not Sans JP;
+    src: url(/assets/NotoSansJP-Regular.otf);
+}
+
 #header {
     padding: 1.5em 0.5em 1.5em 2.5em;
     background-color: var(--c1);
@@ -149,6 +154,7 @@ input[type="button"] {
 }
 
 #footer {
+    margin-top: 5em;
     text-align: center;
     background-color: var(--c10);
     height: 100%;

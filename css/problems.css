@@ -64,6 +64,10 @@ h2 {
   font-size: 14pt;
 }
 
+.description {
+  margin-left: 1em;
+}
+
 .progress {
   display: grid;
   height: 1em;
@@ -74,6 +78,7 @@ h2 {
 .progress span {
   text-align: right;
 }
+
 
 .progress p {
   margin: 0;
@@ -101,6 +106,14 @@ h2 {
 
 .category:hover {
   background-color: var(--c2a);
+}
+
+.category.python {
+  background-color: var(--c3);
+}
+
+.category.python:hover {
+  background-color: var(--c3a);
 }
 
 

@@ -22,7 +22,10 @@ a {
 }
 
 code {
-  font-size: 12pt;
+    background-color: #00000026;
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-size: 12pt;
 }
 
 @font-face {

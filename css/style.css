@@ -1,6 +1,7 @@
 :root {
     --c1: #e4e6c3;
     --c2: #c5d86d;
+    --c3: #717744;
     --c3: #f96e46;
     --c4: #261C15;
     --c10: #EEEFDB;
@@ -107,6 +108,7 @@ input[type="button"] {
     flex-grow: 1;
     border-bottom: 3px solid transparent;
     color: var(--c4);
+    cursor: pointer;
 }
 
 .navigation-link:hover {

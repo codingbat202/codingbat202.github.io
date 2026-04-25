@@ -1,0 +1,16 @@
+
+.header-split-right {
+  gap: 1em;
+}
+
+#login {
+  cursor: pointer;
+}
+
+#login:hover {
+    background-color: #efefef;
+}
+
+#login {
+  color: var(--c4);
+}

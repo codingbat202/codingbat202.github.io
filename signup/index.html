@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/dropdown.css">
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
     <div class="center">
@@ -24,20 +25,17 @@
         </div>
 
         <div class="header-split-right">
-            <!-- <div id="lang-switch"> -->
-            <!--     java/python -->
-            <!-- </div> -->
-            <div id="login">
-                <div class="login-center" style="font-size: 1.2em; font-weight: bold;">Login</div>
-                <div id="login-input">
-                    ID/Email: <input id="username" type="text" value="username123">
-                    Password: <input id="password" type="password" value="password">
-                    <br><input type="button" value="Submit" style="margin-top: 1em;" onclick="window.location.href='../?login='">
-                </div>
-                <div class="login-center" style="font-size: 0.9em; margin-top: 3em">
-                    <a href="#">Forgot Password</a> | <a href="../signup">Create Account</a>
-                </div>
-            </div>
+            Sign up as a ...
+            <a id="login" href="#">
+                Student
+                <img src="../assets/right.svg" style="font-size: 1em; float: right; " id="logo-svg"/>
+            </a>
+            <a id="login" href="#">
+                Teacher
+                <img src="../assets/right.svg" style="font-size: 1em; float: right; " id="logo-svg"/>
+            </a>
+
+            <p style="margin-top: 3em;">Already have an account? <a href="/login">Sign in</a></p>
         </div>
     </div>
 

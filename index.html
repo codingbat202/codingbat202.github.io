@@ -29,8 +29,8 @@
                 <!--     java/python -->
                 <!-- </div> -->
                 <div id="login-buttons">
-                    <input type="button" id="login-button" value="Log In" onclick="goUrl('../login')">
-                    <input type="button" id="signup-button" value="Sign Up">
+                    <input type="button" id="login-button" value="Log In" onclick="goUrl('../login/')">
+                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('../signup/')">
                 </div>
                 <p id="logged-in" style="line-height: 1em; margin: 0; padding: 0; text-align: right; display: none;">Logged in as StudentName</p>
             </div>
@@ -40,12 +40,12 @@
     <div class="center">
 
         <div id="navigation">
-            <a class="navigation-link navigation-selected" href="/">
+            <a class="navigation-link navigation-selected" onclick="goUrl('../')">
                 Home
             </a>
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" href="/problems">
+                <a class="navigation-link" onclick="('../problems/')">
                     Problems
                 </a>
                 <div class="dropdown-content">
@@ -54,12 +54,12 @@
                 </div>
             </div>
 
-            <a class="navigation-link" href="/getting-started">
+            <a class="navigation-link" onclick="goUrl('../getting-started/')">
                 Getting Started
             </a>
 
             <div class="navigation-link dropdown">
-                <a class="navigation-link" href="/problems">
+                <a class="navigation-link" onclick="goUrl('../resources/')">
                     Resources
                 </a>
                 <div class="dropdown-content">
@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <a class="navigation-link" href="/about">
+            <a class="navigation-link" onclick="goUrl('../about/')">
                 About
             </a>
 

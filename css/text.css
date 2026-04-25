@@ -1,0 +1,17 @@
+
+
+/* .body { */
+/*   width: 40em; */
+/*   margin: auto; */
+/* } */
+
+
+h1 {
+  font-size: 16pt;
+  margin-top: 1.5em;
+  color: var(--c3)
+}
+
+.no-top {
+  margin-top: 0 !important;
+}

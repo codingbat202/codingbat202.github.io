@@ -5,9 +5,7 @@ function goUrl(newurl) {
     var url = new URL(url_string);
     var loggedIn = url.searchParams.get("login");
 
-    if (loggedIn != null) {
-        newurl += '?login='
-    }
+    if (loggedIn != null) { newurl += '?login=' }
 
     window.location.href=newurl
 }

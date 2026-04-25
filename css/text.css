@@ -6,10 +6,17 @@
 /* } */
 
 
+
 h1 {
-  font-size: 16pt;
+  font-size: 20pt;
   margin-top: 1.5em;
   color: var(--c3)
+}
+
+h2 {
+  font-size: 16pt;
+  margin-top: 1.5em;
+  color: var(--c3a)
 }
 
 .no-top {

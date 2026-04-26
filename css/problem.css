@@ -2,11 +2,27 @@
 
 
 #body {
+  width: 100%;
+  /* margin-left: -28%; */
+
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+  /* gap: 4em; */
+}
+
+.split {
   width: 150%;
-  margin-left: -25%;
+  margin-left: -28%;
+
   display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-template-areas: 'l r' 'b b';
   grid-template-columns: 1fr 1fr;
   gap: 4em;
+}
+
+.l {
+  grid-area: l;
 }
 
 
@@ -31,31 +47,100 @@ h1 a {
 
 .examples-container code {
   background-color: transparent;
+  padding-left: 0;
 }
 
-.examples {
-  margin-left: 0;
+.examples-grid {
+  display: grid;
+  grid-template-columns: 10em 1fr;
 }
 
-.examples li {
-  margin-top: 1em;
-}
+
 
 .editor-container {
   height: 100%;
   display: grid;
-  grid-template-rows: 2em 1fr;
+  grid-template-rows: 3em 1fr;
   background-color: #1d2021;
+  grid-area: r;
 }
+
+
+.editor-head input {
+  float: right;
+  position: relative;
+  margin: 0 !important;
+  padding: 7px 12px;
+}
+
 
 .editor-title {
   /* background-color: var(--c1); */
   color: var(--c10);
   padding: 0.75em 1em 0 1em;
+  flex-grow: 1;
+}
+
+input[type="button"] {
+  margin: 0em 1em 1em 0em;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: end;
+}
+
+.submit-button {
+  background-color: var(--c2);
+  /* font-weight: bold; */
+}
+.submit-button:hover {
+  background-color: var(--c2a);
+}
+
+.clear-button {
+  background-color: var(--c3);
+}
+.clear-button:hover {
+  background-color: var(--c3a);
 }
 
 #editor {
-  margin: 1em;
+  margin: 0em 1em 0em 1em;
   border: 1px solid var(--c4);
   font-size: 11pt;
+}
+
+.testcases {
+  display: grid;
+  grid-template-columns: 10em 1fr 1fr;
+  gap: 0;
+  grid-area: b;
+  z-index: 100;
+  border: 1px solid black;
+}
+
+.testcases code {
+  background-color: none;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+.grid-item {
+  background-color: var(--c10);
+  padding: 0.5em;
+  border: 1px solid black;
+}
+
+.testcases p {
+  margin: 0;
+}
+
+.grid-item.test-head {
+  background-color: var(--c1);
+}
+
+.incorrect {
+  color: var(--c3)
 }

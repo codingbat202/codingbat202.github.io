@@ -70,19 +70,19 @@
             <div class="editor-container">
                 <div class="editor-title">Editor: Type your solution here</div>
                 <div id="editor">public String[] fizzBuzz(int start, int end) {
-        String[] arr = new String[end - start];
-            for (int i = 0; i < end-start; i++) {
-                if ((i+start) % 15 == 0)
-                    arr[i] = "FizzBuzz";
-                else if ((i+start) % 5 == 0)
-                    arr[i] = "Buzz";
-                else if ((i+start) % 3 == 0)
-                    arr[i] = "Fizz";
-                else
-                    arr[i] = "" + (i+start);
-            }
-        return arr;
-    }</div>
+    String[] arr = new String[end - start];
+    for (int i = 0; i < end-start; i++) {
+        if ((i+start) % 15 == 0)
+            arr[i] = "FizzBuzz";
+        else if ((i+start) % 5 == 0)
+            arr[i] = "Buzz";
+        else if ((i+start) % 3 == 0)
+            arr[i] = "Fizz";
+        else
+            arr[i] = "" + (i+start);
+    }
+    return arr;
+}</div>
                 <div class="buttons">
                     <input type="button" class="submit-button" value="Run Tests" onclick="document.getElementById('testcases').style.display = null">
                     <input type="button" class="clear-button" value="Clear">

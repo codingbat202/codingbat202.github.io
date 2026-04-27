@@ -16,21 +16,6 @@
         <div class="split">
             <div class="l">
                 <h1 class="no-top"><a href="#" onclick="goUrl('/java/array/')">Java Array Problems</a> <code style="background-color: transparent; padding: 0; font-size: 20pt;">></code> fizzBuzz</h1>
-                <!-- <div class="resources-list"> -->
-                <!--     <ul> -->
-                <!--         <li> -->
-                <!--             Create a new array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. --> 
-                <!--         </li> -->
-                <!--         <li> -->
-                <!--             Use <code>a[0]</code>, <code>a[1]</code>, ... to access elements in array <code>a</code>. -->
-                <!--         </li> -->
-                <!--         <li> -->
-                <!--             Use <code>a.length</code> to access the number of elements in array <code>a</code>. --> 
-                <!--         </li> -->
-                <!--     </ul> -->
-                <!--     resource 1 -->
-                <!-- </div> -->
-                <!-- <hr> -->
                 <div class="description margin">
                     <p>
                         This is slightly more difficult version of the famous FizzBuzz problem which is sometimes given as a first problem for job interviews. 
@@ -65,6 +50,24 @@
                         <code>["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]</code>
                     </div>
                 </div>
+
+                <!-- <hr> -->
+                <div class="resources-list" style="margin-top: 1em">
+                    <div class="examples-title">Resources:</div>
+                    <ul>
+                        <li>
+                            Create a new array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. 
+                        </li>
+                        <li>
+                            Use <code>a[0]</code>, <code>a[1]</code>, ... to access elements in array <code>a</code>.
+                        </li>
+                        <li>
+                            Use <code>a.length</code> to access the number of elements in array <code>a</code>. 
+                        </li>
+                    </ul>
+                    resource 1
+                </div>
+
             </div>
 
             <div class="editor-container">
@@ -94,21 +97,23 @@
             <p class="grid-item test-head">Test Case</p>
             <p class="grid-item test-head">Expected</p>
             <p class="grid-item test-head">Result</p>
-            <p class="grid-item">fizzBuzz(1, 6)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(1, 8)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(1, 11)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(1, 16)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(1, 4)</p><p class="grid-item">["1", "2", "Fizz"]</p><p class="pass grid-item">["1", "2", <span class="incorrect">"3"</span>]</p>
-            <p class="grid-item">fizzBuzz(1, 2)</p><p class="grid-item">["1"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(50, 56)</p><p class="grid-item">["Buzz", "Fizz", "52", "53", "Fizz", "Buzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(15, 17)</p><p class="grid-item">["FizzBuzz", "16"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(30, 36)</p><p class="grid-item">["FizzBuzz", "31", "32", "Fizz", "34", "Buzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(1000, 1006)</p><p class="grid-item">["Buzz", "1001", "Fizz", "1003", "1004", "FizzBuzz"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(99, 102)</p><p class="grid-item">["Fizz", "Buzz", "101"]</p><p class="pass grid-item">Pass</p>
-            <p class="grid-item">fizzBuzz(14, 20)</p><p class="grid-item">["14", "FizzBuzz", "16", "17", "Fizz", "19"]</p><p class="pass grid-item">["14", "FizzBuzz", "16", "17", <span class="incorrect">"18"</span>, "19"]</p>
+            <div class="grid-item test-head"></div>
+            <p class="grid-item">fizzBuzz(1, 6)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1, 8)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1, 11)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1, 16)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1, 4)</p><p class="grid-item">["1", "2", "Fizz"]</p><p class="pass grid-item">["1", "2", <span class="incorrect">"3"</span>]</p><div class="failed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1, 2)</p><p class="grid-item">["1"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(50, 56)</p><p class="grid-item">["Buzz", "Fizz", "52", "53", "Fizz", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(15, 17)</p><p class="grid-item">["FizzBuzz", "16"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(30, 36)</p><p class="grid-item">["FizzBuzz", "31", "32", "Fizz", "34", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(1000, 1006)</p><p class="grid-item">["Buzz", "1001", "Fizz", "1003", "1004", "FizzBuzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(99, 102)</p><p class="grid-item">["Fizz", "Buzz", "101"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
+            <p class="grid-item">fizzBuzz(14, 20)</p><p class="grid-item">["14", "FizzBuzz", "16", "17", "Fizz", "19"]</p><p class="pass grid-item">["14", "FizzBuzz", "16", "17", <span class="incorrect">"18"</span>, "19"]</p><div class="failed grid-item"></div>
             <p class="grid-item">Hidden Tests</p>
             <p class="grid-item"></p>
             <p class="pass grid-item">Pass</p>
+            <div class="passed grid-item"></div>
         </div>
         </div>
         <script src="/assets/ace-builds-1.5.0/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -167,10 +172,10 @@
                     Resources
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('/getting-started/')">Getting Started</a>
-                    <a href="#">Java Help</a>
+                    <a onclick="goUrl('/resources/getting-started/')">Getting Started</a>
+                    <a onclick="goUrl('/resources/java-help/')">Java Help</a>
                     <a href="#">Python Help</a>
-                    <a href="#">For Teachers</a>
+                    <a onclick="goUrl('/resources/for-teachers/')">For Teachers</a>
                 </div>
             </div>
 
@@ -183,7 +188,7 @@
                     Account
                 </a>
                 <div class="dropdown-content">
-                    <a href="/">Sign Out</a>
+                    <a href="#" onclick="signOutUrl()">Sign Out</a>
                 </div>
             </div>
         </div>

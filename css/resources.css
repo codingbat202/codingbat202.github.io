@@ -2,6 +2,18 @@
 
 
 
+.img {
+  /* width: 8em; */
+  height: 6em;
+  background-color: white;
+  padding: 1em;
+  object-fit: contain;
+  border-radius: 0.5em;
+}
+
+
+
+
 
 
 
@@ -102,7 +114,7 @@ h2 {
   overflow: hidden;
   cursor: pointer;
   background-color: var(--c2);
-  padding: 1em 1em 1.5em 1em;
+  padding: 1em 1em 1em 1em;
   display: flex;
   flex-direction: column;
 }
@@ -110,14 +122,10 @@ h2 {
 .category:hover {
   background-color: var(--c2a);
 }
-
-.category.python {
-  background-color: var(--c3);
+.category:hover img {
+  filter: brightness(0.95)
 }
 
-.category.python:hover {
-  background-color: var(--c3a);
-}
 
 
 .problems-list {

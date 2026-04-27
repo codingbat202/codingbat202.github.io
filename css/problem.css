@@ -50,6 +50,13 @@ h1 a {
   padding-left: 0;
 }
 
+.resources-list {
+  background-color: var(--c10);
+  padding: 1em;
+  /* border-radius: 0.5em; */
+  border: 3px solid var(--c1);
+}
+
 .examples-grid {
   display: grid;
   grid-template-columns: 10em 1fr;
@@ -114,7 +121,7 @@ input[type="button"] {
 
 .testcases {
   display: grid;
-  grid-template-columns: 10em 1fr 1fr;
+  grid-template-columns: 12em 1fr 1fr 3em;
   gap: 0;
   grid-area: b;
   z-index: 100;
@@ -125,6 +132,14 @@ input[type="button"] {
   background-color: none;
   padding-left: 0;
   border-radius: 0;
+}
+
+.passed {
+  background-color: var(--c2) !important;
+}
+
+.failed {
+  background-color: var(--c3) !important;
 }
 
 .grid-item {

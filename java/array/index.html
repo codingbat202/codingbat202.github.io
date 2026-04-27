@@ -14,20 +14,23 @@
 <body>
     <div id="body" class="body">
         <h1 class="no-top">Java Array Problems</h1>
-        <div class="resources-list">
+        <p>Arrays in Java provide a way of grouping instances of the same data type. For example, you can have an array of integers that contain the first 10 positive even numbers. </p>
+        <div style="text-align: center; width: 100%;">int[] evenNums = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};</div>
+        <p>Arrays have important properties that allow you to access and change the elements in the array. </p>
+        <div>
             <ul>
                 <li>
-                    Create a new array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. 
+                    Create a new empty array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. 
                 </li>
                 <li>
-                    Use <code>a[0]</code>, <code>a[1]</code>, ... to access elements in array <code>a</code>.
+                    Use <code>a[0]</code>, <code>a[1]</code>, ... to access the element at a specific index in array <code>a</code>.
                 </li>
                 <li>
                     Use <code>a.length</code> to access the number of elements in array <code>a</code>. 
                 </li>
             </ul>
-            resource 1
         </div>
+
 
 
 
@@ -155,6 +158,12 @@
                 </div>
             </div>
         </div>
+        <div class="resources-list" style="margin-top: 2em">
+            Additional Resources: 
+            <ul>
+                <li></li>
+            </ul>
+        </div>
     </div>
 
     <!-- {{{ -->
@@ -208,10 +217,10 @@
                     Resources
                 </a>
                 <div class="dropdown-content">
-                    <a onclick="goUrl('/getting-started/')">Getting Started</a>
-                    <a href="#">Java Help</a>
+                    <a onclick="goUrl('/resources/getting-started/')">Getting Started</a>
+                    <a onclick="goUrl('/resources/java-help/')">Java Help</a>
                     <a href="#">Python Help</a>
-                    <a href="#">For Teachers</a>
+                    <a onclick="goUrl('/resources/for-teachers/')">For Teachers</a>
                 </div>
             </div>
 
@@ -224,7 +233,7 @@
                     Account
                 </a>
                 <div class="dropdown-content">
-                    <a href="/">Sign Out</a>
+                    <a href="#" onclick="signOutUrl()">Sign Out</a>
                 </div>
             </div>
         </div>

@@ -79,8 +79,8 @@ pre {
   width: var(--width);
   height: var(--width);
   position: sticky;
-  bottom: 5em;
-  transform: translateX(-0em);
+  bottom: 10em;
+  transform: translateX(calc((var(--width) + 4em)));
   border-radius: 100%;
   padding-left: 1em;
   padding-top: 1em;

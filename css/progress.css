@@ -1,0 +1,54 @@
+
+.prog-bar {
+  background-color: var(--c10);
+  width: calc(100% - 2em);
+  height: 0.6em;
+  border-radius: 5em;
+  margin: 1em;
+}
+
+.prog-bar-complete {
+  background-color: var(--c2);
+  width: 0;
+  height: 100%;
+  border-radius: 5em;
+}
+
+.prog-bar-complete[prog="60"] {
+  width: 66.6%;
+}
+
+.prog-bar-complete[prog="70"] {
+  width: 77.8%;
+}
+
+.prog-bar-complete[prog="2"] {
+  width: 2.9%;
+}
+
+.prog-bar-complete[prog="10"] {
+  width: 10%;
+}
+
+.prog-bar-complete[prog="37"] {
+  width: 37.1%;
+}
+
+.prog-bar.java {
+  background-color: white;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+.prog-bar-complete.java {
+  background-color: var(--c3);
+}
+
+.prog-bar.python {
+  background-color: white;
+  background-color: white;
+  margin-bottom: 0;
+  margin-top: 1.5em;
+}
+.prog-bar-complete.python {
+  background-color: var(--c2a)
+}

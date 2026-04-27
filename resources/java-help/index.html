@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodingBat</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/text.css">
+    <script src="/js/url.js"></script>
+</head>
+<body>
+        <div id="body" class="body">
+
+<h1 class="no-top">Java Help and Videos</h1>
+<ul>
+    <li>Example Solution Code</li>
+    <li>
+        Strings
+        <ul>
+          <li>String Introduction (video)</li>
+          <li>Substring v2 (video)</li>
+          <li>String Equals and Loops</li>
+          <li>String indexOf and Parsing</li>
+        </ul>
+    </li>
+    <li>If and Boolean Logic &mdash; Introduction to if statements, booleans, logic</li>
+        <ul>
+          <li>If Boolean Example Solution Code 1 (video)</li>
+          <li>If Boolean Example Solution Code 2 (video)</li>
+        </ul>
+        <li><a href="#" onclick="goUrl('/resources/java-help/for-while-loops/')">For and While Loops</a></li>
+    <li>Arrays and Loops</li>
+    <li>Map Introduction</li>
+    <li>Map WordCount</li>
+    <li>Functional Mapping</li>
+    <li>Functional Filtering </li>
+</ul>
+
+        </div>
+
+    <!-- {{{ -->
+    <div id="header">
+        <div class="header-split center">
+            <div class="header-split-left">
+                <div class="logo">
+                    <img src="/assets/source-code.svg" style="font-size: 3em;" id="logo-svg"/>
+                    <a onclick="goUrl('/');" style="font-size: 3em;">
+                        <div id="logo-text">
+                            CodingBat
+                        </div>
+                    </a>
+                </div>
+                <div style="font-size: 1.2em; margin-top: 0.4em;">coding practice</div>
+            </div>
+
+            <div class="header-split-right">
+                <!-- <div id="lang-switch"> -->
+                <!--     java/python -->
+                <!-- </div> -->
+                <div id="login-buttons">
+                    <input type="button" id="login-button" value="Log In" onclick="goUrl('/login/')">
+                    <input type="button" id="signup-button" value="Sign Up" onclick="goUrl('/signup/')">
+                </div>
+                <p id="logged-in" style="line-height: 1em; margin: 0; padding: 0; text-align: right; display: none;">Logged in as StudentName</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+
+        <div id="navigation">
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/')">
+                Home
+            </a>
+
+            <div class="navigation-link dropdown">
+                <a class="navigation-link-content" onclick="goUrl('/java/')">
+                    Problems
+                </a>
+                <div class="dropdown-content">
+                    <a onclick="goUrl('/java/')">Java</a>
+                    <a onclick="goUrl('/python/')">Python</a>
+                </div>
+            </div>
+
+
+            <div class="navigation-link dropdown">
+                <a class="navigation-link-content" onclick="goUrl('/resources/')">
+                    Resources
+                </a>
+                <div class="dropdown-content">
+                    <a onclick="goUrl('/resources/getting-started/')">Getting Started</a>
+                    <a onclick="goUrl('/resources/java-help/')">Java Help</a>
+                    <a href="#">Python Help</a>
+                    <a onclick="goUrl('/resources/for-teachers/')">For Teachers</a>
+                </div>
+            </div>
+
+            <a class="navigation-link navigation-link-content" onclick="goUrl('/about/')">
+                About
+            </a>
+
+            <div class="navigation-link dropdown" style="display: none" id="account-tab">
+                <a class="navigation-link-content" href="#">
+                    Account
+                </a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="signOutUrl()">Sign Out</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="body-insert"></div>
+
+    </div>
+
+
+    <div id="footer">
+        <div id="footer-content" class="center">
+            Copyright <a href="http://www-cs-faculty.stanford.edu/~nick">Nick Parlante</a> 2017 | <a href="">Privacy</a>
+        </div>
+    </div>
+    <!-- }}} -->
+
+</body>
+    <script src="/js/code.js"></script>
+    <script src="/js/template.js"></script>
+    <script>selectedTabIndex(2)</script>
+</html>

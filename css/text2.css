@@ -1,0 +1,13 @@
+
+
+
+pre {
+  font-size: 12pt;
+  background-color: var(--c10);
+  padding: 1em;
+  border-radius: 0.5em;
+}
+
+.editor {
+  font-size: 11pt;
+}

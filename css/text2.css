@@ -43,7 +43,7 @@ pre {
   --width: 15em;
   width: var(--width);
   position: sticky;
-  top: 5em;
+  top: 16em;
   transform: translateX(calc((var(--width) + 5em) * -1));
   border: solid 3px lightgray;
 }

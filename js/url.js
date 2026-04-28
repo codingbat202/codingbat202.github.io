@@ -28,3 +28,7 @@ function goPrevLoggedIn() {
 function signOutUrl() {
     window.location.href = window.location.pathname;
 }
+
+function ni() {
+    alert('not implemented!');
+}

@@ -5,15 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingBat</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/dropdown.css">
-    <script src="../js/url.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="/js/url.js"></script>
 </head>
 <body> 
     <div id="body" class="body">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo quam, elementum aliquam erat blandit, pretium vulputate orci. Morbi quis lorem sed augue efficitur bibendum et eget enim. Sed nibh nisi, rhoncus laoreet urna eu, ultrices sodales nibh. Etiam eget nunc fringilla, aliquam metus non, rhoncus quam. Vestibulum eget nibh nec purus iaculis placerat. Morbi luctus sapien quis mauris elementum dignissim. Donec sed ipsum porttitor, pellentesque odio vel, tempor mauris. Mauris eu velit varius massa tincidunt posuere nec mattis elit.
+        <section id="home" class="section">
+            <img class="img" src="/assets/programming-code-editor-illustration-design_92086-840-3408316524.jpg">
+            <h2> Practice Coding Every Day </h2>
+            <p class="home-p">CodingBat is a free live coding platform for students to practice. Practice hundreds of Java and Python problems in a variety of topics. </p>
+            <input type="button" value="Sign Up Now">
+        </section>
 
-            Mauris nec faucibus turpis. Vivamus et odio tincidunt, feugiat sapien non, auctor lacus. In tempor tincidunt est vel pretium. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis convallis velit et convallis aliquet. Cras viverra consectetur mauris vitae eleifend. Donec tincidunt ullamcorper nulla eget tincidunt. Etiam a commodo purus, id congue elit. Nunc lacinia turpis id ligula scelerisque interdum. Nullam porta, orci ut scelerisque euismod, sem sapien pellentesque odio, vel porttitor nibh justo non erat. Proin tincidunt mauris id posuere ultrices. Donec hendrerit semper lacus sed molestie. Suspendisse potenti. Nulla placerat, odio nec facilisis congue, urna risus cursus metus, at vehicula metus urna at turpis. Suspendisse odio erat, semper id congue in, posuere sit amet nulla. Donec in venenatis quam, sed interdum massa. 
+        <section id="edit" class="section">
+                <div id="editor">
+
+
+def big_diff(nums):
+    min_num = nums[0]
+    max_num = nums[0]
+    for i in range(1, len(nums)):
+        if nums[i] < min_num:
+            min_num = nums[i]
+        if nums[i] > max_num:
+        max_num = nums[i]
+    return max_num - min_num
+
+
+                </div>
+            <h2> Live Coding in Your Browser</h2>
+            <p>Run code directly from your browser and receive immediate feedback. </p>
+            <input id="button-2" type="button" value="Try a Problem" onclick="goUrl('/java/')">
+        </section>
+        <script src="/assets/ace-builds-1.5.0/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+
+        <section id="end" class="section">
+            <h2> Platform for Teachers and Students </h2>
+            <p>CodingBat helps teachers track student progress and assist in their learning. CodingBat problems are stress-free ways for students to perfect their coding skills. </p>
+            <input type="button" value="Explore Our Teacher Resources">
+        </section>
     </div>
 
     <!-- {{{ -->
@@ -70,7 +102,7 @@
                     <a onclick="goUrl('/resources/getting-started/')">Getting Started</a>
                     <a onclick="goUrl('/resources/java-help/')">Java Help</a>
                     <a href="#">Python Help</a>
-                    <a onclick="goUrl('/resources/for-teachers/')">For Teachers</a>
+                    <a href="#">For Teachers</a>
                 </div>
             </div>
 
@@ -101,7 +133,17 @@
     <!-- }}} -->
 
 </body>
-    <script src="../js/code.js"></script>
-    <script src="../js/template.js"></script>
+    <script src="/js/code.js"></script>
+    <script src="/js/template.js"></script>
     <script>selectedTabIndex(0)</script>
+
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/gruvbox");
+        editor.session.setMode("ace/mode/python");
+        editor.resize();
+        editor.setOptions({readOnly: true, highlightActiveLine: false, highlightGutterLine: false});
+        editor.renderer.$cursorLayer.element.style.display = "none"
+        editor.session.setTabSize(4);
+    </script>
 </html>

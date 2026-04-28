@@ -1,0 +1,52 @@
+.img {
+  width: 50%;
+  margin-right: 3em;
+  float: left;
+}
+
+.body {
+  width: 55em;
+}
+
+section {
+  padding: 3em;
+}
+
+#home {
+  background-color: var(--c10);
+}
+
+.section h2 {
+  font-size: 18pt;
+}
+
+.section p {
+  font-size: 14pt;
+}
+
+#edit {
+  background-color: white;
+}
+
+.section input[type="button"] {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  background-color: var(--c2);
+  border: none;
+}
+
+#button-2 {
+  margin-bottom: 2.5em;
+}
+
+#editor {
+  height: 17em;
+  margin-left: 3em;
+  width: 50%;
+  float: right;
+  font-size: 12pt;
+}
+
+#end {
+  background-color: var(--c10);
+}

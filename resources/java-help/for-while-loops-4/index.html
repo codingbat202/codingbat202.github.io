@@ -37,94 +37,89 @@
     </div>
 
     <div class="text">
-<h1 class="no-top"> Java For and While Loops </h1>
+<h1 class="no-top"> Java More Loop Cases </h1>
 
+
+<h2 id="test-style"> Test Style < vs. <= </h2>
 
 <p>
-    This handout introduces the basic structure and use of Java for and while loops with example code an exercises. See also the associated CodingBat <a href="#" onclick="goUrl('/java/')">java loop practice</a> problems using strings and arrays. Written by <a href="#" onclick="goUrl('/about/')">Nick Parlante</a>.
+  In the for-loop test, we can choose between < and <= &mdash; which is the better way to write it? If the for-loop stops at 1 less than some nice round value, such as stopping at 99, then it's better to write the test using < and the nice round value &mdash; <code>i < 100</code> &mdash; instead of the equivalent <code>i <= 99</code>. If the loop goes up to and includes the nice round value, then write the loop with <=. So a loop up to and including the value 100 would use the test <code>i <= 100</code> instead of the equivalent <code>i < 101</code>.
 </p>
 
-<h2 id="java-loop"> Java Loop </h2>
+<h2 id="for-vs-while-loops"> For vs. While Loops </h2>
 
 <p>
-With loops, you get to leverage the power in the computer. Working with computers, you quickly learn that they lack any sort of insight to solve problems on their own. On the other hand, the computer is happy to execute the code we specify a million times over, which is its own sort of power. Loops are the way to do this.
-</p>
-
-<p>
-A while loop has a boolean test and a body containing statements, like this:
-</p>
-
-<div id="editor1" class="editor" style="height: 10em">
-int count = 0;
-while (count < 100) {  // test: boolean test within (..)
-  System.out.println("count:" + count);  // body: statements within {..}
-  count = count + 1;
-}
-System.out.println("all done!");
-</div>
-
-<p>
-An if-statement looks at the test one time and then maybe executes the body once. The while-loop extends this idea, executing the body again and again, checking the test each time. The while-loop follows these steps:
-</p>
-
-<ol>
-    <li>Check if the test is true or false. If false, the loop "exits" and does not execute the body. If the test is true, continue with step 2.</li>
-    <li>Execute the body statements, starting at the top and proceeding down through them all.</li>
-    <li>Go back to step 1 and check the test again. If it is true, run the body again. Each time the body finishes, "loop around" and check the test again. Each run of the body is called an "iteration" of the loop. </li>
-</ol>
-
-<p>
-Eventually the test is false, the loop exits, and the program continues with the line after the while-loop. For example, the above while-loop prints:
+The for-loop can actually be understood as equivalent to a while-loop version, like this:
 </p>
 
 <pre>
-count:0
-count:1
-count:2
-count:3
-...
-count:98
-count:99
-all done!
+init
+while (test) {
+  body
+  increment
+}
 </pre>
 
 <p>
-The count variable starts at 0, and increases by 1 on each iteration. On the 100th iteration of the loop body, the body prints "99" and then increases count to 100. The program loops back to the top and checks the test (count < 100) again. On all previous checks, the test was true. This time the test is false, and the loop exits without executing the body. We use while-loops to execute some code until some condition is satisfied.
+So for example, we could write the standard 0..99 loop like this, although for real code we would prefer the for-loop in this problem:
 </p>
 
-<h2 id="how-to-write-a-while-loop"> How To Write a While Loop </h2>
-
-<p>
-To write a while-loop, we think about three parts...
-</p>
-
-<ul>
-    <li>test &mdash; a boolean test of what should be true before each iteration. Or put another way, the test is the "green light" condition that says that each iteration can go ahead. (The phrase "green light" is a good mnemonic for what the test does.) Eventually, the test should become false and the loop can exit. Think about the precondition that describes the state before each iteration runs &mdash; how are things arranged, what is true? (Also known as an "invariant".) In the above example, the test (count < 100) means that each iteration can proceed, so long as (count < 100) is true.</li>
-    <li>work &mdash; code in the body that does something for each iteration such as printing or drawing something. Some loops do not have any identifiable work in the body. In the above example, the work is the println() that prints something out for each iteration.</li>
-    <li>increment &mdash; code in the body that advances things so we are closer to making the test false. At the end of the body, the code will loop around to the top of the body. Sometimes, some cleanup is required at the end of the body to set things up for the next iteration. In the above example, the line <code>count = count + 1;</code> accomplishes the increment. That can also be written as <code>count++;</code>. </li>
-</ul>
-
-<h2 id="while-loop-examples"> While Loop Example</h2>
-
-<p>
-Here's a while loop example that uses a loop to see how man times you can divide a number by 2:
-</p>
-
-<div id="editor2" class="editor" style="height: 14em">
-// Given a num, returns how many times can we divide it by 2 to get down to 1.
-int count2Div(int num) {
-  int count = 0;           // count how many divisions we've done
-  while (num >= 1) {
-    num = num / 2;
-    count++;
-  }
-  return count;
+<div id="editor15" class="editor" style="height: 9em">
+int i = 0;
+while (i<100) {
+  System.out.println(i);
+  i++;
 }
 </div>
 
+<p>
+As a matter of style, if we are solving a series-of-values 0, 1, 2, 3, ... 100 type problem, then the for-loop is preferable. That's exactly what it does. If the looping problem does not fit into the series-of-values pattern, then the standard while-loop is best.
+</p>
+
+<h2 id="loop-with-2-exit-tests"> Loop With 2 Exit Tests </h2>
+
+<p>
+  When writing a loop that looks for something, we often have two exit conditions. Suppose as a sort of James Bond example, we have a Vault object with something locked up inside of it, and it responds to a <code>tryCode(int code)</code> message that returns true if that code number opens the vault. The codes are between 0 and 1 million. We want to write a method <code>findCode()</code> that takes a vault, tries all the codes, and returns the first code that opens the vault, or -1 if no code opened the vault. The best way to write this is with the standard for-loop on the outside to iterate the range 0...1 million, and then inside the loop use an if-statement to check for additional exit conditions.
+</p>
+
+<div id="editor16" class="editor" style="height: 14em">
+public int findCode(Vault vault) {
+  for (int i=0; i<=1000000; i++) {
+    if (vault.tryCode(i)) {
+      // found the code!
+      return(i);
+    }
+  }
+  return(-1);  // if we get here, we did not find the code
+}
+</div>
+
+<p>
+  So in this case, reaching 1 million is one exit condition, and <code>tryCode()</code> returning true is the other.
+</p>
+
+<h2 id="only-test-at-the-top"> Only Test at the Top </h2>
+
+<p>
+The while loop checks the test, runs the body, checks the test, runs the body, ... and so on until the test is false. The test is only checked once for each iteration, just before the body runs. The test is not checked while the body runs, although the English phrasing "while (count < 100) { ..." can give the false impression that the test is checked continuously. Suppose we have the loop:
+</p>
+
+<div id="editor17" class="editor" style="height: 10em">
+count = 0;
+while (count < 100) {
+  count = count + 10;
+  count = count - 10;
+  count = count + 1;
+}
+</div>
+
+<p>
+This loop changes count up and down inside the loop. For example, at some point we imagine that the line <code>count = count + 10</code> will make the test (count < 100) false. However, that will not exit the loop, because the test is not checked at that time. The test is only checked at the very top of the loop, just before each run of the body. So in this strange example, there will be times that count is greater than 100, and the loop will continue to run, exiting only when count is >= 100 at the top of the loop.
+</p>
+
 <div class="buttons">
-  <input type="button" class="disabled" value="Previous: None">
-  <input type="button" value="Next: While Loop Special Cases" onclick="goUrl('/resources/java-help/for-while-loops-2/')">
+  <input type="button" value="Previous: Java For Loops" onclick="goUrl('/resources/java-help/for-while-loops-3/')">
+  <input type="button" class="disabled" value="Next: None">
 </div>
 
 
@@ -227,7 +222,7 @@ int count2Div(int num) {
     <script>selectedTabIndex(2)</script>
 
     <script>
-      for (i = 1; i < 100; i++) {
+      for (i = 15; i < 100; i++) {
         var editor = ace.edit("editor" + i);
         editor.setTheme("ace/theme/gruvbox");
         editor.session.setMode("ace/mode/java");

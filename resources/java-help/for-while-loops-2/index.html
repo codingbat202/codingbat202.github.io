@@ -37,94 +37,141 @@
     </div>
 
     <div class="text">
-<h1 class="no-top"> Java For and While Loops </h1>
+<h1 class="no-top"> Java While Loop Special Cases </h1>
 
 
-<p>
-    This handout introduces the basic structure and use of Java for and while loops with example code an exercises. See also the associated CodingBat <a href="#" onclick="goUrl('/java/')">java loop practice</a> problems using strings and arrays. Written by <a href="#" onclick="goUrl('/about/')">Nick Parlante</a>.
-</p>
-
-<h2 id="java-loop"> Java Loop </h2>
+<h2 id="zero-loop-iterations"> Zero Loop Iterations </h2>
 
 <p>
-With loops, you get to leverage the power in the computer. Working with computers, you quickly learn that they lack any sort of insight to solve problems on their own. On the other hand, the computer is happy to execute the code we specify a million times over, which is its own sort of power. Loops are the way to do this.
+Since the while-loop checks the test before every iteration, it is possible for the body to not run even once:
 </p>
 
-<p>
-A while loop has a boolean test and a body containing statements, like this:
-</p>
-
-<div id="editor1" class="editor" style="height: 10em">
-int count = 0;
-while (count < 100) {  // test: boolean test within (..)
-  System.out.println("count:" + count);  // body: statements within {..}
-  count = count + 1;
+<div id="editor3" class="editor" style="height: 8em">
+int count = 100;
+while (count < 100) {        // the test is false the very first time
+  count = count + 1          // this line never runs
 }
-System.out.println("all done!");
+</div>
+
+<h2 id="infinite-loop"> Infinite Loop </h2>
+
+<p>
+The most famous sort of bug you can get with loops is an "infinite loop", where through some mis-arrangement, running the loop body fails to get any closer to making the test false. Typically, this comes down to some sort of logical disconnect between the body and the test. For example, suppose the body fails to make the count bigger by accident:
+</p>
+
+<div id="editor4" class="editor" style="height: 9em">
+int count = 0;
+while (count < 100) {
+  System.out.println("count:" + count);
+  count = count * 1;         // OOPS, does not change count
+}
 </div>
 
 <p>
-An if-statement looks at the test one time and then maybe executes the body once. The while-loop extends this idea, executing the body again and again, checking the test each time. The while-loop follows these steps:
+Or suppose we forget to put in the count line entirely, so the loop just spins in place with count stuck at zero:
 </p>
 
-<ol>
-    <li>Check if the test is true or false. If false, the loop "exits" and does not execute the body. If the test is true, continue with step 2.</li>
-    <li>Execute the body statements, starting at the top and proceeding down through them all.</li>
-    <li>Go back to step 1 and check the test again. If it is true, run the body again. Each time the body finishes, "loop around" and check the test again. Each run of the body is called an "iteration" of the loop. </li>
-</ol>
+<div id="editor5" class="editor" style="height: 9em">
+int count = 0;
+while (count < 100) {
+  System.out.println("count:" + count);
+  // OOPS, forget to put in a line that changes count at all
+}
+</div>
 
 <p>
-Eventually the test is false, the loop exits, and the program continues with the line after the while-loop. For example, the above while-loop prints:
+Prints when run:
 </p>
 
 <pre>
 count:0
-count:1
-count:2
-count:3
+count:0
+count:0
+count:0
 ...
-count:98
-count:99
-all done!
+&mdash;never stops&mdash;
 </pre>
 
 <p>
-The count variable starts at 0, and increases by 1 on each iteration. On the 100th iteration of the loop body, the body prints "99" and then increases count to 100. The program loops back to the top and checks the test (count < 100) again. On all previous checks, the test was true. This time the test is false, and the loop exits without executing the body. We use while-loops to execute some code until some condition is satisfied.
+In some cases, we want the code to run on and on without stopping. In that case, we might write an infinite loop on purpose by giving true as the test:
 </p>
 
-<h2 id="how-to-write-a-while-loop"> How To Write a While Loop </h2>
-
-<p>
-To write a while-loop, we think about three parts...
-</p>
-
-<ul>
-    <li>test &mdash; a boolean test of what should be true before each iteration. Or put another way, the test is the "green light" condition that says that each iteration can go ahead. (The phrase "green light" is a good mnemonic for what the test does.) Eventually, the test should become false and the loop can exit. Think about the precondition that describes the state before each iteration runs &mdash; how are things arranged, what is true? (Also known as an "invariant".) In the above example, the test (count < 100) means that each iteration can proceed, so long as (count < 100) is true.</li>
-    <li>work &mdash; code in the body that does something for each iteration such as printing or drawing something. Some loops do not have any identifiable work in the body. In the above example, the work is the println() that prints something out for each iteration.</li>
-    <li>increment &mdash; code in the body that advances things so we are closer to making the test false. At the end of the body, the code will loop around to the top of the body. Sometimes, some cleanup is required at the end of the body to set things up for the next iteration. In the above example, the line <code>count = count + 1;</code> accomplishes the increment. That can also be written as <code>count++;</code>. </li>
-</ul>
-
-<h2 id="while-loop-examples"> While Loop Example</h2>
-
-<p>
-Here's a while loop example that uses a loop to see how man times you can divide a number by 2:
-</p>
-
-<div id="editor2" class="editor" style="height: 14em">
-// Given a num, returns how many times can we divide it by 2 to get down to 1.
-int count2Div(int num) {
-  int count = 0;           // count how many divisions we've done
-  while (num >= 1) {
-    num = num / 2;
-    count++;
-  }
-  return count;
+<div id="editor6" class="editor" style="height: 8em">
+while (true) {            // deliberate infinite loop
+  ...
+  ...
 }
 </div>
 
+<p>
+Many computer people like to think of themselves as part of a whimsical field that does not take itself too seriously compared to more established disciplines. For example, Apple Computer headquarters is located on "1 Infinite Loop, Cupertino CA".
+</p>
+
+<h2 id="loop-and-a-half-break"> Loop and a Half - "break" </h2>
+
+<p>
+  Sometimes, the computation we want does not fit into the tidy while-test-body structure. For example, suppose we want to do operations A, B, C and D, but the natural place for the test is after B and before C. So the sequence we want is A, B, test, C, D. It's awkward to use the while loop as shown so far to solve this sort of problem. To position the test wherever we want, not just at the top, we will use the <code>break</code> statement, shown in the example below.
+</p>
+
+<p>
+  For example, suppose we have a Frog object that responds to <code>dive()</code> and <code>float()</code> methods that move the frog around in a pond. The frog also responds to an <code>isSunny()</code> method that returns true if the frog is in the sun. We want to write a "find sun" loop that does this: float, check if there is sun. If there is sun, we're done. Otherwise, dive and try the cycle again. So the sequence is float, sun check, dive, float, sun check, dive, .... until the sun check returns <code>true</code>. The key feature here is that the test does not naturally fit at the top of the loop. Instead the test most cleanly goes in the middle of the loop.
+</p>
+
+<p>
+  The code for this problem demonstrates uses an while-break structure. An if statement in the middle of the while loop checks for the exit condition. If the exit condition is true, the code calls <code>break</code> which exits the while loop immediately:
+</p>
+
+<div id="editor7" class="editor" style="height: 20em">
+// suppose we have a variable "frog"
+while (true) {     // use "true" as test &mdash; exit is handled by the 
+                   // if-break below
+  frog.float();
+
+  // Exit using if-break
+  // Check for exit condition, and if true call break
+  if (frog.isSunny()) {
+    break;         // this exits the loop
+  }
+
+  frog.dive();
+}
+// The break exits the loop, leading to this line
+</div>
+
+<p>
+With the while-break, we have the power of a while loop, but now we can position the test anywhere we want instead of just at the top. In fact, a standard while loop of this form:
+</p>
+
+<div id="editor8" class="editor" style="height: 7em">
+while (test) {
+  body
+}
+</div>
+
+<p>
+Is equivalent to a while-break loop where the break is positioned at the very top:
+</p>
+
+<div id="editor9" class="editor" style="height: 10em">
+while (true) {
+  if (!(test)) {
+    break;
+  }
+  body
+}
+</div>
+
+<p>
+As a matter of good coding style, we would not write a loop using while-break unless there was no other way. The standard while loop is shorter, more readable, and can express what we want 90% of the time. We use the while-break version where necessary to deal with cases where the test does not go at the top.
+</p>
+
+<p>
+Notice that the normal while loop test is a "green light" condition &mdash; if it is true, the loop continues; if it is false the loop exits. With a while-break, the test is the opposite. The while-break test is a "red light" condition. If it is true, the loop exits.
+</p>
+
 <div class="buttons">
-  <input type="button" class="disabled" value="Previous: None">
-  <input type="button" value="Next: While Loop Special Cases" onclick="goUrl('/resources/java-help/for-while-loops-2/')">
+  <input type="button" value="Previous: Java For and While Loops" onclick="goUrl('/resources/java-help/for-while-loops/')">
+  <input type="button" value="Next: Java For Loops" onclick="goUrl('/resources/java-help/for-while-loops-3/')">
 </div>
 
 
@@ -227,7 +274,7 @@ int count2Div(int num) {
     <script>selectedTabIndex(2)</script>
 
     <script>
-      for (i = 1; i < 100; i++) {
+      for (i = 3; i < 100; i++) {
         var editor = ace.edit("editor" + i);
         editor.setTheme("ace/theme/gruvbox");
         editor.session.setMode("ace/mode/java");

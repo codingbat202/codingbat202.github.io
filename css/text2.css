@@ -32,7 +32,7 @@ pre {
 
 
 .text {
-  margin-top: -24.5em
+  margin-top: -29.5em
 }
 
 
@@ -97,4 +97,24 @@ pre {
 
 .up:hover {
   background-color: var(--c3a);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2em;
+  gap: 2em;
+}
+
+.buttons input {
+  background-color: var(--c2);
+  border: none;
+}
+
+.buttons input:hover {
+  background-color: var(--c2a)
+}
+
+.disabled {
+  background-color: lightgrey !important;
 }

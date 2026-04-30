@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="examples-container">
-                    <div class="examples-title">Examples:</div>
+                    <div class="examples-title">Examples Test Cases:</div>
                     <div class="examples-grid">
                         <code>fizzBuzz(1, 6)</code>
                         <code>["1", "2", "Fizz", "4", "Buzz"]</code>
@@ -54,7 +54,7 @@
                 <!-- <hr> -->
                 <div class="resources-list" style="margin-top: 1em">
                     <div class="examples-title">Resources:</div>
-                    <ul>
+                    <ul style="margin-top: 0;">
                         <li>
                             Create a new array for the variable <code>a</code> using <code>int[] a = new int[10];</code>, where 10 is the length of the array. 
                         </li>
@@ -87,17 +87,18 @@
     return arr;
 }</div>
                 <div class="buttons">
-                    <input type="button" class="submit-button" value="Run Tests" onclick="document.getElementById('testcases').style.display = null">
+                    <input type="button" class="submit-button" value="Run Tests" onclick="document.getElementById('test-container').style.display = null">
                     <input type="button" class="clear-button" value="Clear">
                     <input type="button" value="Progress Graph" onclick="ni()">
                 </div>
             </div>
 
-        <div id="testcases" class="testcases" style="display: none;">
-            <p class="grid-item test-head">Test Case</p>
-            <p class="grid-item test-head">Expected</p>
-            <p class="grid-item test-head">Result</p>
-            <div class="grid-item test-head"></div>
+            <div id="test-container" style="display: none;">
+                <h2>Results From Tests</h2>
+        <div id="testcases" class="testcases">
+            <p class="grid-item test-head bold">Test Case</p>
+            <p class="grid-item test-head bold">Expected</p>
+            <p class="grid-item test-head bold" style="grid-column: 3 / 5;">Result</p>
             <p class="grid-item">fizzBuzz(1, 6)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
             <p class="grid-item">fizzBuzz(1, 8)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
             <p class="grid-item">fizzBuzz(1, 11)</p><p class="grid-item">["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz"]</p><p class="pass grid-item">Pass</p><div class="passed grid-item"></div>
@@ -114,7 +115,10 @@
             <p class="grid-item"></p>
             <p class="pass grid-item">Pass</p>
             <div class="passed grid-item"></div>
+            <p class="grid-item test-comment test-head"><span class="bold">Score: </span>11 / 13</p>
+            <p class="grid-item test-comment2 bold test-head">Almost there!</p>
         </div>
+            </div>
         </div>
         <script src="/assets/ace-builds-1.5.0/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 

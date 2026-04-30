@@ -16,27 +16,56 @@
 <h1 class="no-top">Getting Started</h1>
 
 <p>
-CodingBat is a free site of live Java and Python coding problems to build coding skill. Each problem has a problem description and a table showing some sample output for that problem. 
+CodingBat is a free site of live Java and Python coding problems that help students build coding skill. Each problem consists of a problem description and some example cases showing the desired outcome. 
 </p>
 
 <p>
-Type your code into the large text area and click the "Run Tests" button to save your code, compile and run. Each time you click "Run Tests", the results are shown in the bottom of the page. 
+    Type your code into the large text area and click the <span class="bold">"Run Tests"</span> button to save your code, compile, and run. The results will show up shortly in the bottom of the page. 
 </p>
 
 <h2>Coding Help</h2>
 
-See the <a href="#" onclick="goUrl('/resources/java-help/')">Java Help</a> and <a href="#">Python Help</a> pages for many resources and videos on various coding topics. This is a great place to see examples and get help if you are stuck on a problem. 
+If you are stuck on a problem, visit the <a href="#" onclick="goUrl('/resources/java-help/')">Java Help</a> and <a href="#">Python Help</a> pages for resources and videos on various coding topics. 
 
 <h2>Coding Ground Rules</h2>
 
 <p>
-Your code should just be a simple method or function with the prototype just as it is in the starter code. The code should compute and return the value (don't print the result value). 
+    Your code should just be a simple method or function with the prototype just as it is in the starter code. The code should compute and <span class="bold">return</span> the value (don't print the result value). 
 </p>
 
-Additional Notes:
+<p>
+So, Python would follow this format: 
+</p>
+
+<div id="editor" style="height: 8.2em; width: 40em; margin: auto;">
+def function_name(argument1):
+
+    # Type your solution in this function
+
+    return variable # Return the result with this line!
+</div>
+
+<p>
+And Java would follow this format: 
+</p>
+
+<div id="editor2" style="height: 9.4em; width: 40em; margin: auto;">
+public returnType functionName(type argument1) {
+
+    // Type your solution in this function
+
+    return variable; // Return the result with this line!
+}
+</div>
+
+
+<p class="bold">
+Additional Notes
+</p>
+
 <ul>
     <li>If the method takes a String or array argument, those arguments will never be passed in as null. However, the empty String or array is still a valid case unless the problem statement specifically says otherwise. </li>
-    <li>You may write helper methods, although most often, the problem can be solved in with code short enough to fit in one method. </li>
+    <li>You may write helper methods (extra methods outside main method/function), but most problems are short and simple enough to fit in one method. </li>
     <li>In Java, the import for the java.util classes is already done if you would like to use those classes. Python code should not print and should not do any imports.</li>
 </ul>
  
@@ -44,12 +73,12 @@ Additional Notes:
 <h2>Running Green</h2>
 
 <p>
-When your code compiles and runs correctly, you get a green check for that problem. If the output of a run says "Timed out", your code probably includes an infinite loop or other bug that prevents it from finishing.
+    When your code compiles and runs correctly, you get a green check for that problem. If the output of a run says <span class="red bold">"Timed out"</span>, your code probably includes an infinite loop or other bug that prevents it from finishing.
 </p>
 
 
 <p>
-There may be a few "Hidden Tests" listed at the bottom of the table that are not detailed. These test cases are similar to the ones shown in the table, but with different inputs that are not visible to you. These test cases test the comprehensiveness of your code and make sure it runs for a variety of test cases, not just the ones listed. 
+    There may be a few <span class="bold">"Hidden Tests"</span> listed at the bottom of the table that are not detailed. These test cases are similar to the ones shown in the table, but with different inputs that are not visible to you. These test cases test the comprehensiveness of your code and make sure it runs for a variety of test cases, not just the ones listed. 
 </p>
 
 <h2>Saving Work with Accounts</h2>
@@ -58,6 +87,8 @@ There may be a few "Hidden Tests" listed at the bottom of the table that are not
 If you create an account, you can come back to the server another time and your code, and you checkmarks, etc. will be saved. You can do everything on the server without an account, but your work will be forgotten when your session ends after 2 hours without activity.
 </p>
 
+
+        <script src="/assets/ace-builds-1.5.0/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 
         </div>
 
@@ -149,4 +180,22 @@ If you create an account, you can come back to the server another time and your 
     <script src="/js/code.js"></script>
     <script src="/js/template.js"></script>
     <script>selectedTabIndex(2)</script>
+
+    <script>
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/gruvbox");
+        editor.session.setMode("ace/mode/python");
+        editor.resize();
+        editor.setOptions({readOnly: true, highlightActiveLine: false, highlightGutterLine: false});
+        editor.renderer.$cursorLayer.element.style.display = "none"
+        editor.session.setTabSize(4);
+
+        var editor2 = ace.edit("editor2");
+        editor2.setTheme("ace/theme/gruvbox");
+        editor2.session.setMode("ace/mode/java");
+        editor2.resize();
+        editor2.setOptions({readOnly: true, highlightActiveLine: false, highlightGutterLine: false});
+        editor2.renderer.$cursorLayer.element.style.display = "none"
+        editor2.session.setTabSize(4);
+    </script>
 </html>

@@ -22,3 +22,11 @@ h2 {
 .no-top {
   margin-top: 0 !important;
 }
+
+.red {
+  color: var(--c3) !important;
+}
+
+.bold {
+  font-weight: bold;
+}

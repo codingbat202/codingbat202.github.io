@@ -30,6 +30,10 @@ h1 a {
   color: var(--c3);
 }
 
+h1 a:hover {
+  color: var(--c3a);
+}
+
 .margin {
   margin: 0 1em;
 }
@@ -119,11 +123,14 @@ input[type="button"] {
   font-size: 11pt;
 }
 
+#test-container {
+  grid-area: b;
+}
+
 .testcases {
   display: grid;
   grid-template-columns: 12em 1fr 1fr 3em;
   gap: 0;
-  grid-area: b;
   z-index: 100;
   border: 1px solid black;
 }
@@ -146,6 +153,14 @@ input[type="button"] {
   background-color: var(--c10);
   padding: 0.5em;
   border: 1px solid black;
+}
+
+.test-comment {
+  /* grid-column: 1 / 1; */
+}
+
+.test-comment2 {
+  grid-column: 2 / 5;
 }
 
 .testcases p {

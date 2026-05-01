@@ -44,7 +44,7 @@ section {
 #home {
   position: relative;
   background-color: var(--c10);
-  text-shadow: 0 0 10px black; 
+  text-shadow: 0 0 5px black; 
 }
 #home h2 {
   font-size: 20pt !important;

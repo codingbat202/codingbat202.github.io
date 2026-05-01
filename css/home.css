@@ -1,19 +1,72 @@
 .img {
+  width: 100%;
+  margin-right: 3em;
+  float: left;
+  filter: brightness(0.55);
+  object-fit: cover;
+  height: 30em !important;
+}
+
+img {
+  user-select: none;
+}
+
+.img2 {
   width: 50%;
   margin-right: 3em;
   float: left;
+  height: 21.5em;
+  object-fit: cover;
+  border: solid 1px black;
 }
 
 .body {
-  width: 55em;
+  /* width: 55em; */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: -32px !important;
 }
 
 section {
+  margin: 0;
+}
+
+#end {
   padding: 3em;
 }
 
+#edit {
+  padding: 3em;
+  padding-top: 34em;
+}
+
 #home {
+  position: relative;
   background-color: var(--c10);
+  text-shadow: 0 0 10px black; 
+}
+#home h2 {
+  font-size: 20pt !important;
+}
+
+#home p {
+  font-size: 16pt !important;
+}
+
+.home-text {
+  position: absolute;
+  color: white;
+  margin: 0 3em;
+  height: 22em;
+  bottom: -24em !important;
+  right: 0;
+  /* background-color: red; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 0; */
+  display: grid;
+  grid-template-rows: 1fr 4em 5em 4em;
 }
 
 .section h2 {
@@ -42,7 +95,7 @@ section {
 }
 
 #editor {
-  height: 17em;
+  height: 19.3em;
   margin-left: 3em;
   width: 50%;
   float: right;

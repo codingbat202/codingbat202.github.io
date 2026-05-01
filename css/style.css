@@ -21,11 +21,19 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 14pt !important;
+}
+
+li {
+    font-size: 14pt !important;
+}
+
 code {
     background-color: #00000026;
     border-radius: 4px;
     padding: 1px 6px;
-    font-size: 12pt;
+    font-size: 14pt !important;
 }
 
 @font-face {

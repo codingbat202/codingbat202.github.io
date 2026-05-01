@@ -12,37 +12,45 @@
 </head>
 <body> 
     <div id="body" class="body">
-        <section id="home" class="section">
-            <img class="img" src="/assets/programming-code-editor-illustration-design_92086-840-3408316524.jpg">
-            <h2> Practice Coding Every Day </h2>
-            <p class="home-p">CodingBat is a free live coding platform for students to practice hundreds of Java and Python problems in a variety of topics. </p>
-            <input type="button" value="Sign Up Now" onclick="goUrl('/signup/')">
+        <section id="home" class="section" back>
+            <!-- <img class="img" src="/assets/programming-code-editor-illustration-design_92086-840-3408316524.jpg"> -->
+            <img class="img" src="/assets/2023-HSPC-HERO.jpg">
+            <div class="home-text">
+                <div></div>
+                <h2 style="color: var(--c2)"> Coding in the Large and Small </h2>
+                <p class="home-p">CodingBat is a free live coding platform that helps students to practice hundreds of Java and Python problems in a variety of topics. </p>
+                <p>We break down coding problems into small chunks that develop your skills in fundamental data structures and programming ideas. Mastering smaller problems will help students break down larger, more complex problems. </p>
+            </div>
+            <!-- <input type="button" value="Sign Up Now" onclick="goUrl('/signup/')"> -->
         </section>
 
         <section id="edit" class="section">
                 <div id="editor">
 
-
 def big_diff(nums):
+
     min_num = nums[0]
     max_num = nums[0]
+
     for i in range(1, len(nums)):
         if nums[i] < min_num:
             min_num = nums[i]
+
         if nums[i] > max_num:
-        max_num = nums[i]
+            max_num = nums[i]
+
     return max_num - min_num
 
-
                 </div>
-            <h2> Live Coding in Your Browser</h2>
-            <p>Run code directly from your browser and receive immediate feedback. </p>
-            <input id="button-2" type="button" value="Try a Problem" onclick="goUrl('/java/')">
+                <h2> <span style="color: var(--c3);">Live</span> Coding in Your Browser</h2>
+            <p>Run code directly from your browser and receive immediate feedback. No software installation. No sign up required. </p>
+            <input id="button-2" type="button" value="Try a Problem" onclick="goUrl('/java/array/p1/')">
         </section>
         <script src="/assets/ace-builds-1.5.0/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 
         <section id="end" class="section">
-            <h2> Platform for Teachers and Students </h2>
+            <img class="img2" src="/assets/wdfSqh5ZHKM1ZW3EAgDnqFwfmA8-1675247755.jpg">
+            <h2> Platform for <span style="color: var(--c3)">Teachers</span> and <span style="color: var(--c3)">Students</span> </h2>
             <p>CodingBat helps teachers track student progress and assist in their learning. CodingBat problems are stress-free ways for students to achieve their coding goals. </p>
             <input type="button" value="Explore Our Teacher Resources" onclick="ni()">
         </section>
@@ -60,7 +68,7 @@ def big_diff(nums):
                         </div>
                     </a>
                 </div>
-                <div style="font-size: 1.2em; margin-top: 0.4em;">coding practice</div>
+                <div style="font-size: 1.2em; margin-top: 0.4em;">live coding practice</div>
             </div>
 
             <div class="header-split-right">
